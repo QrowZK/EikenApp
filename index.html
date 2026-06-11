@@ -19,7 +19,32 @@
 </head>
 <body>
 
-<div class="page-layout">
+<div id="login-screen">
+  <div class="login-box">
+    <div class="header-icon" id="login-icon">英検</div>
+    <h1>英検 Practice</h1>
+    <p class="login-sub">ログインしてください</p>
+
+    <form id="login-form">
+      <input type="email" id="login-email" placeholder="メールアドレス" autocomplete="username" required>
+      <input type="password" id="login-password" placeholder="パスワード" autocomplete="current-password" required>
+      <button type="submit" class="primary-btn" id="login-submit">ログイン</button>
+    </form>
+    <p class="login-toggle" id="show-signup-wrap">アカウントをお持ちでない方は <a href="#" id="show-signup">新規登録</a></p>
+
+    <form id="signup-form" class="hidden">
+      <input type="text" id="signup-name" placeholder="表示名" autocomplete="name">
+      <input type="email" id="signup-email" placeholder="メールアドレス" autocomplete="username" required>
+      <input type="password" id="signup-password" placeholder="パスワード（6文字以上）" autocomplete="new-password" required minlength="6">
+      <button type="submit" class="primary-btn" id="signup-submit">登録</button>
+    </form>
+    <p class="login-toggle hidden" id="show-login-wrap">既にアカウントをお持ちの方は <a href="#" id="show-login">ログイン</a></p>
+
+    <p class="login-error hidden" id="login-error"></p>
+  </div>
+</div>
+
+<div class="page-layout hidden" id="page-layout">
 <div class="main-col" id="app">
 
   <div id="menu-screen">
@@ -38,6 +63,7 @@
         <button class="level-tab" data-level="P">準2級</button>
       </div>
       <button class="theme-btn" id="theme-btn" title="ライト/ダークモード">🌙</button>
+      <button class="theme-btn" id="logout-btn" title="ログアウト">🚪</button>
     </div>
 
     <!-- Set tabs -->
@@ -124,8 +150,10 @@
   </div>
 </div>
 
+<script src="supabase-client.js"></script>
 <script src="questions.js"></script>
 <script src="app.js"></script>
+<script src="auth.js"></script>
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {

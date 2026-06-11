@@ -1,12 +1,14 @@
 // Eiken Practice — Service Worker
 // Cache-first strategy: serve from cache, update in background
 
-const CACHE_NAME = 'eiken-practice-v1';
+const CACHE_NAME = 'eiken-practice-v2';
 const ASSETS = [
   '/',
   '/index.html',
   '/style.css',
   '/app.js',
+  '/auth.js',
+  '/supabase-client.js',
   '/questions.js',
   '/manifest.json',
   '/icons/icon-192.png',

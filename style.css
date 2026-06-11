@@ -147,3 +147,17 @@
   .modal-confirm { color: #fff; }
 
   .hidden { display: none !important; }
+
+  /* ── Login screen ── */
+  #login-screen { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+  .login-box { width: 100%; max-width: 360px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 28px 24px; text-align: center; box-shadow: 0 4px 20px var(--shadow); }
+  .login-box #login-icon { background: #1565C0; }
+  .login-box h1 { font-size: 20px; font-weight: 800; margin-bottom: 4px; }
+  .login-sub { font-size: 13px; color: var(--text2); margin-bottom: 18px; }
+  .login-box input { width: 100%; padding: 11px 12px; margin-top: 10px; border: 2px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 14px; font-family: inherit; }
+  .login-box input:focus { outline: none; border-color: #1565C0; }
+  .login-toggle { font-size: 13px; color: var(--text2); margin-top: 14px; }
+  .login-toggle a { color: #1565C0; font-weight: 600; text-decoration: none; }
+  .login-toggle a:hover { text-decoration: underline; }
+  .login-error { font-size: 13px; color: #C62828; background: #FFEBEE; border-radius: 8px; padding: 10px; margin-top: 14px; }
+  body.dark .login-error { color: #EF9A9A; background: #3a1f22; }
